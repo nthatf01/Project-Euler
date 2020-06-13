@@ -8,7 +8,10 @@
 #
 ###############################################################################
 
+import time
+
 user_number = int(input("Find the smallest positive number that is evenly divisible by all numbers from 1 to what number? "))
+timer = time.time()
 max_number = user_number
 test = max_number
 total_factors = [1]
@@ -58,3 +61,4 @@ while max_number > 1:
 final_product = calculate_product()
 
 print("The smallest positive number that is evenly divisible by all of the numbers from 1 to {} is {}".format(user_number, final_product))
+print("Time = {}".format(round(time.time() - timer, 6)))
